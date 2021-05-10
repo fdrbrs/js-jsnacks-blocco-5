@@ -63,3 +63,31 @@ for (var i = 0; i < 10; i++){
     sommaPeso = sommaPeso + zucchine[i].peso;
 }
 console.log('peso sommato di tutte le zucchine: ' + sommaPeso.toFixed(2) + ' kilogrammi');
+
+/* 
+Snack 2:
+Crea 10 oggetti che rappresentano una zucchina.
+Dividi in due array separati le zucchine che misurano meno o più di 15cm.
+Infine stampa separatamente quanto pesano i due gruppi di zucchine.
+*/
+
+var zucchineSotto15 = [];
+var zucchineSopra15 = [];
+var zucchineSotto15Peso = 0;
+var zucchineSopra15Peso = 0;
+
+for (var i = 0; i < 10; i++){
+    if (zucchine[i].lunghezza < 15) {
+        zucchineSotto15.push(zucchine[i])
+        zucchineSotto15Peso = zucchineSotto15Peso + zucchine[i].peso;
+    } else {
+        zucchineSopra15.push(zucchine[i])
+        zucchineSopra15Peso = zucchineSopra15Peso + zucchine[i].peso;
+    }
+}
+
+console.log('le zucchine lunghe meno di 15 cm pesano in totale: ' + zucchineSotto15Peso + ' kilogrammi');
+console.log('le zucchine lunghe almeno 15 cm pesano in totale: ' + zucchineSopra15Peso  + ' kilogrammi');
+
+//Snack 3
+//Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (es. Ciao -> oaiC)
