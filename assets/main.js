@@ -91,3 +91,12 @@ console.log('le zucchine lunghe almeno 15 cm pesano in totale: ' + zucchineSopra
 
 //Snack 3
 //Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (es. Ciao -> oaiC)
+
+var stringaDaGirare = prompt('Inserisci una stringa e te la restituirò girata');
+
+function giraStringa(stringa) {
+    var stringaGirata = stringa.split("").reverse().join("");
+    return stringa  + " girata diventa " + stringaGirata;
+}
+
+console.log(giraStringa(stringaDaGirare));
