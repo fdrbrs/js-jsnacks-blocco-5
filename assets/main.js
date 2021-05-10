@@ -100,3 +100,50 @@ function giraStringa(stringa) {
 }
 
 console.log(giraStringa(stringaDaGirare));
+
+/* 
+Snack 4:
+Scrivi una funzione che fonda due array (aventi lo stesso numero di elementi) prendendo alternativamente gli elementi da uno e dall’altro
+es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+*/
+
+var numeri = [1, 2, 3, 4, 5];
+var lettere = ['a', 'b', 'c', 'd', 'e']
+
+function fondiArray(array1, array2) {
+    var arrayFusi = [];
+    for (var i = 0; i < array1.length; i++){
+        arrayFusi.push(array1[i]);
+        arrayFusi.push(array2[i]);
+    }
+    return arrayFusi;
+}
+
+console.log(fondiArray(numeri, lettere));
+
+/* 
+Snack 5:
+Scrivi una funzione che accetti tre argomenti:
+un array e due numeri (“a” più piccolo di “b” e “b” grande al massimo quanto il numero di elementi dell’array).
+La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra “a” e “b”
+*/
+
+function fromToArray(min, max, array) {
+    if (max > array.length) {
+        alert('valore massimo non valido')
+    } else if (min > max ) {
+        alert('valore minimo non valido')
+    } else {
+        var returnArray = [];
+        for (var i = min; i <= max; i++){
+            returnArray.push(array[i])
+        }
+    }
+    return returnArray;
+}
+
+//provo la funzione
+
+var arrayProva = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'l']
+
+console.log(fromToArray(2,8,arrayProva));
